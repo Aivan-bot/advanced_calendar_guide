@@ -1,19 +1,62 @@
-// Advanced Calendar for Jira - Interactive Scripts
+// Advanced Calendar for Jira - User Guide Scripts
 
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const targetId = this.getAttribute('href');
+            const target = document.querySelector(targetId);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                // Adjust for sticky navbar
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                const targetPosition = target.offsetTop - navbarHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
+                
+                // Update active navigation link
+                updateActiveNav(targetId);
             }
         });
     });
+
+    // Update active navigation link on scroll
+    const sections = document.querySelectorAll('.content-section, .hero');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY + 100;
+        
+        sections.forEach(section => {
+            const sectionId = '#' + section.id;
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                updateActiveNav(sectionId);
+            }
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    function updateActiveNav(targetId) {
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === targetId) {
+                link.classList.add('active');
+            }
+        });
+    }
 
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
@@ -26,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Feature card hover effects
-    const featureCards = document.querySelectorAll('.feature-card');
+    const featureCards = document.querySelectorAll('.feature-card, .content-card');
     featureCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-4px)';
@@ -85,98 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form submission simulation
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            console.log('Form submitted');
-            alert('Thank you for your interest! We will contact you shortly.');
-            this.reset();
-        });
-    }
-
-    // Sticky header when scrolling
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.boxShadow = 'none';
-        }
-    });
-
-    // Parallax effect for hero section
-    const hero = document.querySelector('.hero');
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * 0.5;
-        if (hero) {
-            hero.style.backgroundPositionY = `${rate}px`;
-        }
-    });
-
-    // Add loading state to buttons
-    document.querySelectorAll('.btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const originalText = this.textContent;
-            this.disabled = true;
-            this.textContent = 'Loading...';
-            
-            setTimeout(() => {
-                this.disabled = false;
-                this.textContent = originalText;
-            }, 1500);
-        });
-    });
-
-    // Feature card animations on scroll
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.feature-card').forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(card);
-    });
-
-    // Console info for demo purposes
-    console.log('Advanced Calendar for Jira - Interactive Scripts Loaded');
+    // Console info
+    console.log('Advanced Calendar for Jira - User Guide Scripts Loaded');
     console.log('XALT - Elevate, Execute, Empower');
 });
-
-// Custom event for calendar interactions
-class CalendarEvent extends Event {
-    constructor(type, calendarId, issueKey, startDate, endDate) {
-        super(type);
-        this.calendarId = calendarId;
-        this.issueKey = issueKey;
-        this.startDate = startDate;
-        this.endDate = endDate;
-    }
-}
-
-// Simple calendar interaction simulation
-function initCalendarInteractions() {
-    console.log('Initializing calendar interactions...');
-    
-    // Simulate calendar rendering
-    const calendarContainer = document.querySelector('.calendar-container');
-    if (calendarContainer) {
-        console.log('Calendar container found, ready for integration');
-    }
-}
-
-// Initialize on DOM ready
-document.addEventListener('DOMContentLoaded', initCalendarInteractions);
