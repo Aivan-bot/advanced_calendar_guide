@@ -4,408 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced Calendar for Jira - User Guide</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="#hero"><span class="logo-x">X</span>ALT</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#getting-started">Getting Started</a></li>
-                <li><a href="#using-the-calendar">Using the Calendar</a></li>
-                <li><a href="#filtering">Filtering</a></li>
-                <li><a href="#analytics">Analytics</a></li>
-                <li><a href="#troubleshooting">Troubleshooting</a></li>
-            </ul>
-            <a href="https://marketplace.atlassian.com/apps/2425792725/advanced-calendar-for-jira" class="btn btn-primary">Install Now</a>
+    <nav class="nav">
+        <a href="#hero" class="nav-logo">
+            <span>Advanced Calendar</span>
+        </a>
+        <div class="nav-links">
+            <a href="#overview">Overview</a>
+            <a href="#getting-started">Getting Started</a>
+            <a href="#using-the-calendar">Using the Calendar</a>
+            <a href="#filtering">Filtering</a>
+            <a href="#analytics">Analytics</a>
+            <a href="#troubleshooting">Troubleshooting</a>
         </div>
+        <a href="https://marketplace.atlassian.com/apps/2425792725/advanced-calendar-for-jira" class="nav-cta">Install Now</a>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Advanced Calendar for Jira</h1>
-                <p class="hero-subtitle">Your complete user guide for visualizing Jira issues on a real calendar</p>
-                
-                <div class="hero-features">
-                    <div class="feature-item">
-                        <span class="feature-icon">📅</span>
-                        <span>Weekly & Monthly Views</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">🎨</span>
-                        <span>Color-Coded Statuses</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">📊</span>
-                        <span>Live Analytics</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">🔗</span>
-                        <span>Jira Integration</span>
-                    </div>
-                </div>
+        <div class="hero-content">
+            <div class="hero-tag">User Guide</div>
+            <h1>Advanced Calendar for Jira</h1>
+            <p>Your complete user guide for visualizing Jira issues on a real calendar</p>
+            
+            <div class="hero-meta">
+                <span><span class="hero-icon">📅</span> Weekly & Monthly Views</span>
+                <span><span class="hero-icon">🎨</span> Color-Coded Statuses</span>
+                <span><span class="hero-icon">📊</span> Live Analytics</span>
+                <span><span class="hero-icon">🔗</span> Jira Integration</span>
+            </div>
 
-                <div class="hero-actions">
-                    <a href="https://marketplace.atlassian.com/apps/2425792725/advanced-calendar-for-jira" class="btn btn-primary btn-large">Install on Marketplace</a>
-                    <a href="#getting-started" class="btn btn-secondary btn-large">Get Started</a>
-                </div>
+            <div class="hero-actions">
+                <a href="https://marketplace.atlassian.com/apps/2425792725/advanced-calendar-for-jira" class="nav-cta btn-large">Install on Marketplace</a>
+                <a href="#getting-started" class="nav-cta btn-large" style="background: rgba(78,205,196,0.2);">Get Started</a>
             </div>
         </div>
     </section>
 
     <!-- Overview Section -->
-    <section id="overview" class="content-section">
-        <div class="container">
-            <h2 class="section-title">What Advanced Calendar Does</h2>
-            
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>Turn Jira Issues into a Visual Calendar</h3>
-                    <p>Advanced Calendar transforms your Jira data into an intuitive, visual schedule that makes planning and tracking effortless.</p>
+    <section id="overview" class="cards-section">
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">✨</span> Overview</span>
                 </div>
+                <h2>What Advanced Calendar Does</h2>
+                <p>Advanced Calendar transforms your Jira data into an intuitive, visual schedule that makes planning and tracking effortless.</p>
+            </div>
 
-                <div class="content-card">
-                    <h3>Key Features</h3>
-                    <ul class="feature-list">
-                        <li><strong>Weekly and monthly views</strong> with true hourly timelines</li>
-                        <li><strong>Continuous multi-day bars</strong> for long-running work</li>
-                        <li><strong>Color-coded statuses</strong> and visit-type icons with legends</li>
-                        <li><strong>Site/location filter</strong> to focus on specific places or teams</li>
-                        <li><strong>Click-to-details modal</strong> with a "View in Jira" button</li>
-                        <li><strong>Live analytics</strong> showing total visits and busiest day</li>
-                    </ul>
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">🚀</span> Key Features</span>
                 </div>
+                <h2>Key Features</h2>
+                <p>Weekly and monthly views with true hourly timelines, continuous multi-day bars, color-coded statuses, site/location filter, click-to-details modal, and live analytics.</p>
+            </div>
 
-                <div class="content-card">
-                    <h3>Use Cases</h3>
-                    <p>Perfect for:</p>
-                    <ul class="feature-list">
-                        <li>Service visits and on-site work</li>
-                        <li>Inspections and maintenance</li>
-                        <li>Any time-based schedule in Jira</li>
-                    </ul>
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">🎯</span> Use Cases</span>
                 </div>
+                <h2>Use Cases</h2>
+                <p>Perfect for service visits, on-site work, inspections, maintenance, and any time-based schedule in Jira.</p>
             </div>
         </div>
     </section>
 
     <!-- Getting Started Section -->
-    <section id="getting-started" class="content-section">
-        <div class="container">
-            <h2 class="section-title">Opening Advanced Calendar</h2>
-            
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>How to Open</h3>
-                    <ol class="step-list">
-                        <li>In Jira, go to the top navigation and click <strong>Apps</strong>.</li>
-                        <li>Choose <strong>Advanced Calendar for Jira</strong> (or <strong>Advanced Calendar</strong>) from the list.</li>
-                        <li>The calendar opens, usually in <strong>Monthly</strong> view by default.</li>
-                    </ol>
+    <section id="getting-started" class="cards-section">
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">📝</span> Getting Started</span>
                 </div>
+                <h2>Opening Advanced Calendar</h2>
+                <p class="step-list">
+                    1. In Jira, go to the top navigation and click <strong>Apps</strong>.<br>
+                    2. Choose <strong>Advanced Calendar for Jira</strong> from the list.<br>
+                    3. The calendar opens, usually in <strong>Monthly</strong> view by default.
+                </p>
+            </div>
 
-                <div class="content-card">
-                    <h3>If You Don't See the App</h3>
-                    <ul class="feature-list">
-                        <li>Ask your Jira admin to install <strong>Advanced Calendar for Jira</strong> from the <a href="https://marketplace.atlassian.com/apps/2425792725/advanced-calendar-for-jira">Atlassian Marketplace</a>.</li>
-                        <li>Make sure you have access to the projects that the calendar uses.</li>
-                    </ul>
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">⚠️</span> Troubleshooting</span>
                 </div>
+                <h2>If You Don't See the App</h2>
+                <p>Ask your Jira admin to install Advanced Calendar for Jira from the Atlassian Marketplace, and make sure you have access to the projects that the calendar uses.</p>
             </div>
         </div>
     </section>
 
     <!-- Using the Calendar Section -->
-    <section id="using-the-calendar" class="content-section">
-        <div class="container">
-            <h2 class="section-title">Using the Calendar</h2>
-            
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>Switching Between Week and Month View</h3>
-                    <p>Advanced Calendar has two main views:</p>
-                    <ul class="feature-list">
-                        <li><strong>Weekly view</strong> – shows an hourly timeline from Monday to Sunday</li>
-                        <li><strong>Monthly view</strong> – shows a classic month grid with continuous bars for multi-day issues</li>
-                    </ul>
-                    <p><strong>To switch:</strong> Look for the <strong>Week / Month</strong> toggle at the top of the calendar.</p>
+    <section id="using-the-calendar" class="cards-section">
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">📅</span> Views</span>
                 </div>
+                <h2>Switching Between Week and Month View</h2>
+                <p>Advanced Calendar has two main views: <strong>Weekly view</strong> shows an hourly timeline from Monday to Sunday, and <strong>Monthly view</strong> shows a classic month grid with continuous bars for multi-day issues. Look for the <strong>Week / Month</strong> toggle at the top of the calendar to switch between them.</p>
+            </div>
 
-                <div class="content-card">
-                    <h3>Moving Around the Calendar</h3>
-                    <p>Use the <strong>Prev</strong> and <strong>Next</strong> buttons to move backward or forward in time:</p>
-                    <ul class="feature-list">
-                        <li><strong>Weekly view:</strong> Each step moves you by one week (Monday–Sunday)</li>
-                        <li><strong>Monthly view:</strong> Each step moves you by one calendar month</li>
-                    </ul>
-                    <p>The app fetches a buffered range of dates behind the scenes, so multi-day issues appear as one continuous bar even if they start before or end after the current view.</p>
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">🗓️</span> Navigation</span>
                 </div>
+                <h2>Moving Around the Calendar</h2>
+                <p>Use the <strong>Prev</strong> and <strong>Next</strong> buttons to move backward or forward in time. In weekly view, each step moves by one week (Monday–Sunday). In monthly view, each step moves by one calendar month.</p>
+            </div>
 
-                <div class="content-card">
-                    <h3>Understanding Colors, Icons, and Legends</h3>
-                    <p>Each bar on the calendar represents a Jira issue:</p>
-                    <ul class="feature-list">
-                        <li><strong>Bar color</strong>: comes from the issue's status category (To Do, In Progress, Done, etc.)</li>
-                        <li><strong>Visit-type icon or initials</strong>: comes from your Visit Type field</li>
-                        <li><strong>Bar position and length</strong>: comes from Start Time and End Time fields</li>
-                    </ul>
-                    <p><strong>Check the legends:</strong></p>
-                    <ul class="feature-list">
-                        <li><strong>Status Legend</strong>: See what each color means</li>
-                        <li><strong>Visit Type Legend</strong>: See what each icon or initial stands for</li>
-                        <li><strong>Hover or click</strong>: See exact start/end times and mapped fields</li>
-                    </ul>
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">🎨</span> Colors & Icons</span>
                 </div>
+                <h2>Understanding Colors, Icons, and Legends</h2>
+                <p>Each bar represents a Jira issue. Bar color comes from the issue's status category. Visit-type icons come from your Visit Type field. Check the Status Legend for colors and Visit Type Legend for icons.</p>
             </div>
         </div>
     </section>
 
     <!-- Filtering Section -->
-    <section id="filtering" class="content-section">
-        <div class="container">
-            <h2 class="section-title">Filtering by Site/Location</h2>
-            
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>How to Filter</h3>
-                    <ol class="step-list">
-                        <li>Find the <strong>Site/Location</strong> dropdown above the calendar.</li>
-                        <li>Choose a specific site/location to show only issues from that location.</li>
-                        <li>Choose <strong>All</strong> (or clear the filter) to see everything again.</li>
-                    </ol>
+    <section id="filtering" class="cards-section">
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">🔍</span> Filtering</span>
                 </div>
-
-                <div class="content-card">
-                    <h3>Filter Effects</h3>
-                    <p>When you change the filter:</p>
-                    <ul class="feature-list">
-                        <li>The calendar updates to show only matching issues</li>
-                        <li>The analytics cards (Total Visits, Busiest Day) update to match the filtered data</li>
-                    </ul>
-                </div>
+                <h2>Filtering by Site/Location</h2>
+                <p>Find the <strong>Site/Location</strong> dropdown above the calendar. Choose a specific site/location to show only issues from that location. Choose <strong>All</strong> to see everything again. The analytics cards update automatically when you change the filter.</p>
             </div>
         </div>
     </section>
 
     <!-- Working with Issues Section -->
-    <section class="content-section">
-        <div class="container">
-            <h2 class="section-title">Opening Details and Working with Issues</h2>
-            
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>How to Open Details</h3>
-                    <ol class="step-list">
-                        <li>Click on a bar on the calendar.</li>
-                        <li>A <strong>details modal</strong> opens with the key fields mapped by your admin.</li>
-                    </ol>
+    <section class="cards-section">
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">📋</span> Details</span>
                 </div>
-
-                <div class="content-card">
-                    <h3>What You Can Do</h3>
-                    <p>Inside the details modal:</p>
-                    <ul class="feature-list">
-                        <li><strong>View key fields</strong> like summary, customer, contact, assignee, site, visit type, and more</li>
-                        <li><strong>Click "View in Jira"</strong> to work directly in Jira</li>
-                        <li>In Jira, you can:</li>
-                        <ul class="feature-list">
-                            <li>Transition the issue (start, complete, close)</li>
-                            <li>Add comments or attachments</li>
-                            <li>Adjust dates and fields that control calendar appearance</li>
-                        </ul>
-                        <li><strong>After changes in Jira:</strong> Refresh the calendar page or move to another date and back to reload the data</li>
-                    </ul>
-                </div>
+                <h2>Opening Details and Working with Issues</h2>
+                <p>Click on a bar to open a <strong>details modal</strong> with key fields mapped by your admin. Click <strong>"View in Jira"</strong> to work directly in Jira - you can transition issues, add comments, and adjust dates.</p>
             </div>
         </div>
     </section>
 
     <!-- Analytics Section -->
-    <section id="analytics" class="content-section">
-        <div class="container">
-            <h2 class="section-title">Using the Analytics Cards</h2>
-            
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>Quick Statistics</h3>
-                    <p>At the top of the calendar you'll see:</p>
-                    <ul class="feature-list">
-                        <li><strong>Total Visits</strong> – the number of issues shown in the current view and filter</li>
-                        <li><strong>Busiest Day</strong> – the day with the highest number of visits</li>
-                    </ul>
+    <section id="analytics" class="cards-section">
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">📊</span> Analytics</span>
                 </div>
-
-                <div class="content-card">
-                    <h3>When Analytics Update</h3>
-                    <p>These cards update automatically when you:</p>
-                    <ul class="feature-list">
-                        <li>Switch between <strong>Weekly</strong> and <strong>Monthly</strong></li>
-                        <li>Move to a different date range</li>
-                        <li>Change the <strong>Site/Location</strong> filter</li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <h3>Use Cases</h3>
-                    <p>Answer questions like:</p>
-                    <ul class="feature-list">
-                        <li>"How many visits do we have this week?"</li>
-                        <li>"Which day is the busiest for this month at a specific site?"</li>
-                        <li>"How has my schedule changed compared to last week?"</li>
-                    </ul>
-                </div>
+                <h2>Using the Analytics Cards</h2>
+                <p>At the top of the calendar you'll see <strong>Total Visits</strong> and <strong>Busiest Day</strong>. These cards update automatically when you switch views, change date ranges, or filter by site/location.</p>
             </div>
         </div>
     </section>
 
     <!-- Admin Panel Section -->
-    <section class="content-section">
-        <div class="container">
-            <h2 class="section-title">Admin Panel (for reference)</h2>
-            
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>Accessing the Admin Panel</h3>
-                    <ol class="step-list">
-                        <li>In Jira, click <strong>Apps → Advanced Calendar Admin</strong>.</li>
-                    </ol>
-                    <p><em>Note: This section is primarily for admins but affects what end users see.</em></p>
+    <section class="cards-section">
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">⚙️</span> Admin</span>
                 </div>
-
-                <div class="content-card">
-                    <h3>Admin Capabilities</h3>
-                    <p>In the Admin Panel you can:</p>
-                    <ul class="feature-list">
-                        <li><strong>Select projects</strong> to include on the calendar</li>
-                        <li><strong>Map required fields</strong>: Start Time, End Time, Site/Location, Visit Type</li>
-                        <li><strong>Map optional fields</strong> to show on bars or in the details modal</li>
-                        <li><strong>Save</strong> when you're done</li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <h3>Common Issues</h3>
-                    <p>If events are missing or look wrong on the calendar, check:</p>
-                    <ul class="feature-list">
-                        <li>Wrong fields mapped in Admin</li>
-                        <li>Issues missing Start Time or End Time</li>
-                        <li>Insufficient permissions for projects or fields</li>
-                    </ul>
-                </div>
+                <h2>Admin Panel (for reference)</h2>
+                <p>In Jira, click <strong>Apps → Advanced Calendar Admin</strong> to access the admin panel. Here you can select projects, map required fields (Start Time, End Time, Site/Location, Visit Type), and configure optional fields.</p>
             </div>
         </div>
     </section>
 
     <!-- Troubleshooting Section -->
-    <section id="troubleshooting" class="content-section">
-        <div class="container">
-            <h2 class="section-title">Troubleshooting</h2>
-            
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>No Events Showing</h3>
-                    <ul class="feature-list">
-                        <li>Check that your site/location filter is not too narrow</li>
-                        <li>Ask an admin to verify field mappings in <strong>Advanced Calendar Admin</strong></li>
-                        <li>Confirm you have permissions to see the projects and issues</li>
-                    </ul>
+    <section id="troubleshooting" class="cards-section">
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">🔧</span> Troubleshooting</span>
                 </div>
-
-                <div class="content-card">
-                    <h3>Wrong Start/End Times</h3>
-                    <ul class="feature-list">
-                        <li>Open the issue in Jira and verify the Start Time and End Time fields</li>
-                        <li>Correct the dates/times and refresh the calendar</li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <h3>Multi-Day Visits Appear Broken</h3>
-                    <ul class="feature-list">
-                        <li>Check that Start Time and End Time cover the full range</li>
-                        <li>Make sure you're not filtering out part of the range</li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <h3>Layout Issues or Refresh Problems</h3>
-                    <ul class="feature-list">
-                        <li>Try a hard refresh in your browser (Ctrl+Shift+R or Cmd+Shift+R)</li>
-                        <li>If persistent, ask your admin to rebuild and redeploy the app</li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <h3>Need More Fields or Filters</h3>
-                    <ul class="feature-list">
-                        <li>Ask an admin to add more fields in the Admin Panel</li>
-                        <li>Some changes may require a redeploy</li>
-                    </ul>
-                </div>
+                <h2>Common Issues</h2>
+                <p><strong>No events showing:</strong> Check your site/location filter and verify field mappings with your admin.<br><br>
+                <strong>Wrong times:</strong> Verify Start/End Time fields in Jira.<br><br>
+                <strong>Multi-day broken:</strong> Check Start/End Time covers the full range.<br><br>
+                <strong>Layout issues:</strong> Try a hard refresh in your browser.</p>
             </div>
         </div>
     </section>
 
     <!-- Support Section -->
-    <section class="content-section support-section">
-        <div class="container">
-            <h2 class="section-title">Support</h2>
-            <div class="content-card">
-                <p><strong>Maintainer:</strong> Burak Erol / XALT Business Consulting GmbH</p>
-                <p><strong>App on Atlassian Marketplace:</strong> <a href="https://marketplace.atlassian.com/apps/2425792725/advanced-calendar-for-jira">Advanced Calendar for Jira</a></p>
-                <p>For issues or questions, please contact your XALT representative or check the Atlassian Marketplace listing for support options.</p>
+    <section class="cards-section">
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-meta">
+                    <span><span class="card-icon">🤝</span> Support</span>
+                </div>
+                <h2>Support</h2>
+                <p><strong>Maintainer:</strong> Burak Erol / XALT Business Consulting GmbH<br>
+                <strong>App on Atlassian Marketplace:</strong> <a href="https://marketplace.atlassian.com/apps/2425792725/advanced-calendar-for-jira">Advanced Calendar for Jira</a></p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo-footer">
-                        <span class="logo-x">X</span>ALT
-                    </div>
-                    <p class="footer-desc">Building the future of work with AI and Atlassian</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Products</h4>
-                        <ul>
-                            <li><a href="https://marketplace.atlassian.com/apps/2425792725/advanced-calendar-for-jira">Advanced Calendar</a></li>
-                            <li><a href="https://marketplace.atlassian.com/apps">All Apps</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="https://www.xalt.de">About XALT</a></li>
-                            <li><a href="https://www.xalt.de/contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 XALT. All rights reserved.</p>
-                <div class="footer-social">
-                    <a href="https://twitter.com/xalt_de" target="_blank">Twitter</a>
-                    <a href="https://linkedin.com/company/xalt" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/xalt" target="_blank">GitHub</a>
-                </div>
-            </div>
+        <a href="https://www.xalt.de" class="footer-logo">XALT</a>
+        <div class="footer-links">
+            <a href="https://marketplace.atlassian.com/apps/2425792725/advanced-calendar-for-jira">Advanced Calendar</a>
+            <a href="https://www.xalt.de/contact">Contact</a>
         </div>
+        <div class="footer-copy">&copy; 2026 XALT. All rights reserved.</div>
     </footer>
 
     <script src="script.js"></script>
