@@ -171,6 +171,10 @@ body {
 .card-meta {
     display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap;
 }
+.card-meta span {
+    color: var(--white);
+    font-size: 12px;
+}
 .card-icon {
     font-size: 16px;
 }
