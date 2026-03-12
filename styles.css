@@ -360,6 +360,18 @@ section {
     left: 0;
 }
 
+/* Link Styling */
+.feature-list a {
+    color: var(--xalt-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--xalt-primary-light);
+}
+
+.feature-list a:hover {
+    color: var(--xalt-primary-dark);
+    border-bottom-color: var(--xalt-primary-dark);
+}
+
 /* Step List */
 .step-list {
     list-style: none;

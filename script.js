@@ -68,24 +68,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Feature card hover effects
-    const featureCards = document.querySelectorAll('.feature-card, .content-card');
-    featureCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-4px)';
-            this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+    // Button hover effects
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
         });
         
-        card.addEventListener('mouseleave', function() {
+        btn.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0)';
-            this.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-        });
-    });
-
-    // Button click analytics
-    document.querySelectorAll('.btn-primary').forEach(btn => {
-        btn.addEventListener('click', function() {
-            console.log('CTA Button Clicked - Advanced Calendar for Jira');
+            this.style.boxShadow = 'none';
         });
     });
 
@@ -95,13 +88,13 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenuButton.innerHTML = '☰';
     mobileMenuButton.setAttribute('aria-label', 'Toggle menu');
     
-    const navLinks = document.querySelector('.nav-links');
-    if (navLinks) {
+    const navLinksElement = document.querySelector('.nav-links');
+    if (navLinksElement) {
         const navbar = document.querySelector('.navbar');
-        navbar.insertBefore(mobileMenuButton, navLinks);
+        navbar.insertBefore(mobileMenuButton, navLinksElement);
         
         mobileMenuButton.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
+            navLinksElement.classList.toggle('active');
             this.classList.toggle('active');
         });
     }
