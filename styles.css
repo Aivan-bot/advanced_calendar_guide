@@ -496,6 +496,28 @@ section {
     
     .navbar .nav-links {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--xalt-white);
+        flex-direction: column;
+        padding: var(--spacing-lg);
+        border-bottom: 1px solid var(--xalt-light-gray);
+        box-shadow: var(--shadow-sm);
+    }
+    
+    .navbar .nav-links.active {
+        display: flex;
+    }
+    
+    .navbar.scrolled .nav-links {
+        position: static;
+        background-color: transparent;
+        border-bottom: none;
+        box-shadow: none;
+        flex-direction: row;
+        padding: 0;
     }
     
     .footer-content {
