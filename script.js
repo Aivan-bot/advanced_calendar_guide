@@ -1,4 +1,4 @@
-// Advanced Calendar for Jira - User Guide Scripts
+// Advanced Calendar for Jira - Dark Theme Scripts
 
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetId = this.getAttribute('href');
             const target = document.querySelector(targetId);
             if (target) {
-                // Adjust for sticky navbar
-                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                // Adjust for fixed navbar
+                const navbarHeight = document.querySelector('.nav').offsetHeight;
                 const targetPosition = target.offsetTop - navbarHeight - 20;
                 
                 window.scrollTo({
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Update active navigation link on scroll
-    const sections = document.querySelectorAll('.content-section, .hero');
+    const sections = document.querySelectorAll('.cards-section, .hero');
     const navLinks = document.querySelectorAll('.nav-links a');
     
     window.addEventListener('scroll', function() {
@@ -35,18 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionTop = section.offsetTop - 100;
             const sectionHeight = section.offsetHeight;
             
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            if (sectionId && scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 updateActiveNav(sectionId);
             }
         });
-        
-        // Navbar scroll effect
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
     });
 
     function updateActiveNav(targetId) {
@@ -58,22 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Navbar scroll effect
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-
     // Button hover effects
-    const buttons = document.querySelectorAll('.btn');
+    const buttons = document.querySelectorAll('.nav-cta');
     buttons.forEach(btn => {
         btn.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-2px)';
-            this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+            this.style.boxShadow = '0 4px 15px rgba(78,205,196,0.3)';
         });
         
         btn.addEventListener('mouseleave', function() {
@@ -82,46 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Mobile menu toggle
-    const mobileMenuButton = document.createElement('button');
-    mobileMenuButton.className = 'mobile-menu-toggle';
-    mobileMenuButton.innerHTML = '☰';
-    mobileMenuButton.setAttribute('aria-label', 'Toggle menu');
-    
-    const navLinksElement = document.querySelector('.nav-links');
-    if (navLinksElement) {
-        const navbar = document.querySelector('.navbar');
-        navbar.insertBefore(mobileMenuButton, navLinksElement);
-        
-        mobileMenuButton.addEventListener('click', function() {
-            navLinksElement.classList.toggle('active');
-            this.classList.toggle('active');
-        });
-    }
-
-    // Scroll to top button
-    const scrollToTopBtn = document.createElement('button');
-    scrollToTopBtn.className = 'scroll-to-top';
-    scrollToTopBtn.innerHTML = '↑';
-    scrollToTopBtn.setAttribute('aria-label', 'Scroll to top');
-    document.body.appendChild(scrollToTopBtn);
-
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            scrollToTopBtn.classList.add('visible');
-        } else {
-            scrollToTopBtn.classList.remove('visible');
-        }
-    });
-
-    scrollToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
     // Console info
-    console.log('Advanced Calendar for Jira - User Guide Scripts Loaded');
+    console.log('Advanced Calendar for Jira - Dark Theme Scripts Loaded');
     console.log('XALT - Elevate, Execute, Empower');
 });
